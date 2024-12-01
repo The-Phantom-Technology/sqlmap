@@ -4,8 +4,6 @@ cd /opt/PHANTX
 
 git clone https://github.com/sqlmapproject/sqlmap
 
-cp -Rf $(pwd) /opt/PHANTX/sqlmap
-
 if [ $? -eq 0 ]
 then
   # Result is OK! Just continue...
