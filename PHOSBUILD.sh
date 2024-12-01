@@ -16,3 +16,4 @@ fi
 
 chmod -R 755 /opt/PHANTX
 rm -rf /opt/PHOS/tool/sqlmap
+rm -rf /opt/PHOS/tool/sqlmap
