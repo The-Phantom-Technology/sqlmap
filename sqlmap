@@ -1,6 +1,6 @@
 rm -rf /opt/PHANTX/sqlmap
 
-cd /opt/PHANTX
+cd /opt/PHANT
 
 git clone https://github.com/sqlmapproject/sqlmap
 
