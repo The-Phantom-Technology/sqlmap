@@ -1,0 +1,3 @@
+cd /opt/PHANTX/sqlmap
+
+python3 sqlmap "$@"
