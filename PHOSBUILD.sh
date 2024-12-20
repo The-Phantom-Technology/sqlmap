@@ -13,6 +13,7 @@ else
   exit 1
 fi
 
+cp -Rf sqlmap /opt/PHANTX/bin
 
 chmod -R 755 /opt/PHANTX
 rm -rf /opt/PHOS/tool/sqlmap
