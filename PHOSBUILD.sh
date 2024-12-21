@@ -14,6 +14,8 @@ else
   exit 1
 fi
 
+cd /opt/PHANTX/tool
+
 cp -Rf phantxbin/* /opt/PHANTX/bin
 
 chmod -R 755 /opt/PHANTX/bin
