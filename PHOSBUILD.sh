@@ -13,9 +13,9 @@ else
   exit 1
 fi
 
-cp -Rf sqlmap /opt/PHANTX/bin
-cp -Rf sqlmapapi /opt/PHANTX/bin
+cp -Rf phantxbin/* /opt/PHANTX/bin
 
 chmod -R 755 /opt/PHANTX/bin
+
 rm -rf /opt/PHOS/tool/sqlmap
 rm -rf /opt/PHOS/tool/sqlmap
