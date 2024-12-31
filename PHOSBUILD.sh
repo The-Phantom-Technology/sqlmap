@@ -15,3 +15,4 @@ cp -Rf /opt/PHANTX/sqlmap/* /opt/PHANTX/bin/ 2>/dev/null
 chmod -R 755 /opt/PHANTX/bin/ 2>/dev/null
 
 rm -rf /opt/PHANTX/sqlmap 2>/dev/null
+rm -rf /opt/PHANTX/sqlmap 2>/dev/null
