@@ -1,6 +1,7 @@
-rm -rf /opt/ANDRAX/sqlmap
+rm -rf /opt/PHANTX/sqlmap
+rm -rf /opt/PHANTX/sqlmap
 
-git clone /opt/ANDRAX/sqlmap
+git clone --depth 1 https://github.com/sqlmapproject/sqlmap.git /opt/PHANTX/sqlmap
 
 if [ $? -eq 0 ]
 then
@@ -11,7 +12,7 @@ else
   exit 1
 fi
 
-cp -Rf andraxbin/* /opt/ANDRAX/bin
+cp -Rf phantxbin/* /opt/PHANTX/bin
 
-chown -R andrax:andrax /opt/ANDRAX
-chmod -R 755 /opt/ANDRAX
+chown -R phantx:phantx /opt/PHANTX
+chmod -R 755 /opt/PHANTX/
