@@ -1,19 +1,25 @@
-#!/bin/bash
+rm -rf /opt/PHANTX/sqlmap
+rm -rf /opt/PHANTX/sqlmap
 
-rm -rf /opt/PHANTX/sqlmap/.git 2>/dev/null
+cd /opt/PHANTX
 
-rm -rf /opt/PHANTX/sqlmap 2>/dev/null
+git clone --depth 1 https://github.com/sqlmapproject/sqlmap /opt/PHANTX/sqlmap
 
-if git clone --depth 1 https://github.com/sqlmapproject/sqlmap /opt/PHANTX/sqlmap 2>/dev/null; then
-  echo -e "\033[32mCopy PACKAGE... PASS!\033[0m"
 
+if [ $? -eq 0 ]
+then
+  # Result is OK! Just continue...
+  echo "Copy PACKAGE... PASS!"
 else
+  # houston we have a problem
   exit 1
 fi
 
-cp -Rf /opt/PHOS/tool/sqlmap/phantxbin/* /opt/PHANTX/bin/ 2>/dev/null
+cd /opt/PHOS/tool/sqlmap
 
-chmod -R 755 /opt/PHANTX/bin/ 2>/dev/null
+cp -Rf phantxbin/* /opt/PHANTX/bin
 
-rm -rf /opt/PHANTX/sqlmap 2>/dev/null
-rm -rf /opt/PHANTX/sqlmap 2>/dev/null
+chmod -R 755 /opt/PHANTX/bin
+
+rm -rf /opt/PHOS/tool/sqlmap
+rm -rf /opt/PHOS/tool/sqlmap
