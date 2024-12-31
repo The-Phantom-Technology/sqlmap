@@ -1,9 +1,8 @@
 rm -rf /opt/PHANTX/sqlmap
 rm -rf /opt/PHANTX/sqlmap
 
-cd /opt/PHANTX
 
-git clone --depth 1 https://github.com/sqlmapproject/sqlmap /opt/PHANTX/sqlmap
+git clone --depth 1 https://github.com/sqlmapproject/sqlmap /opt/PHANTX/
 
 
 if [ $? -eq 0 ]
