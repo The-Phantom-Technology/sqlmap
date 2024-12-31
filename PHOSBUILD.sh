@@ -1,24 +1,17 @@
-rm -rf /opt/PHANTX/sqlmap
-rm -rf /opt/PHANTX/sqlmap
+#!/bin/bash
 
-cd /opt/PHANTX
+rm -rf /opt/PHANTX/sqlmap/.git 2>/dev/null
 
-git clone https://github.com/sqlmapproject/sqlmap
+rm -rf /opt/PHANTX/sqlmap 2>/dev/null
 
-if [ $? -eq 0 ]
-then
-  # Result is OK! Just continue...
+if git clone --depth 1 https://github.com/sqlmapproject/sqlmap /opt/PHANTX/sqlmap 2>/dev/null; then
   echo "Copy PACKAGE... PASS!"
 else
-  # houston we have a problem
   exit 1
 fi
 
-cd /opt/PHOS/tool
+cp -Rf /opt/PHANTX/sqlmap/* /opt/PHANTX/bin/ 2>/dev/null
 
-cp -Rf phantxbin/* /opt/PHANTX/bin
+chmod -R 755 /opt/PHANTX/bin/ 2>/dev/null
 
-chmod -R 755 /opt/PHANTX/bin
-
-rm -rf /opt/PHOS/tool/sqlmap
-rm -rf /opt/PHOS/tool/sqlmap
+rm -rf /opt/PHANTX/sqlmap 2>/dev/null
