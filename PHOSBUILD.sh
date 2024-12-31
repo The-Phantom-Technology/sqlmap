@@ -14,7 +14,7 @@ else
   exit 1
 fi
 
-cd /opt/PHANTX/PHOS/tool
+cd /opt/PHOS/tool
 
 cp -Rf phantxbin/* /opt/PHANTX/bin
 
