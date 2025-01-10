@@ -1,0 +1,5 @@
+#!/bin/bash
+
+cd /opt/PHANTX/sqlmap
+
+python3 /opt/PHANTX/sqlmap/sqlmap.py "$@"
